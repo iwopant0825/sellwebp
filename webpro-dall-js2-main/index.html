@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .fle{
+        position: relative;
+        background-image: url('https://png.pngtree.com/png-vector/20220926/ourmid/pngtree-ground-soil-green-land-transparent-vector-clipart-png-image_6218283.png');
+        width: 100%;
+        height: 400px;
+        background-color: darkgreen;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    .dd {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .dd h1,p{
+        color: rgb(219, 255, 220);
+        margin: 0;
+        padding: 0;
+    }
+    .sh{
+        margin-left: 0px;
+        margin-top: 225px;
+        height: 100px;
+        width: 100px;
+    }
+    .shsh{
+        position: absolute;
+        width: 100%;
+    }
+    .btnre{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .btn{
+        color: greenyellow;
+        border-radius: 10px;
+        font-size: large;
+        border: none;
+        padding: 15px 30px;
+        background-color: rgb(72, 61, 33);
+    }
+    .ddee{
+        width: 100%;
+        height: 100vh;
+    }
+</style>
+</head>
+<body>
+
+    <div class="fle">
+        <div class="dd">
+            <h1>기획의도</h1>
+            <p>달팽이응원하기</p>
+        </div>
+        <div class="shsh">
+            <img class="sh" src="./pngegg.png">
+            <div class="btnre">
+                 <button class="btn" type="button" onclick="doMove();">응원하기</button>
+            </div>
+        </div>
+            
+    </div>
+
+    <img class="ddee" src="https://i.namu.wiki/i/89XmKfX1ypexrLmnVVUUtz4bGLSwxbNh7fxdnIL9K896ljMmViMCOi4BnrWIo_d2k6vrZkB2jDEaFuMksyrLow.webp" alt="">
+
+
+<script> // 자바스크립트 작성구간 
+
+let num = 0;
+
+function doMove(e) {
+    num += 2;
+    document.querySelector('.sh').style.marginLeft = num + 'px';
+    
+    // 여기서 .sh 요소의 margin-left 값을 가져오는 코드 추가
+    var marginLeftValue = window.getComputedStyle(document.querySelector('.sh')).getPropertyValue('margin-left');
+    var marginLeftNumber = parseInt(marginLeftValue, 10);
+    
+    if (marginLeftNumber >= 1600) {
+        alert("성공");
+    }
+}
+
+
+</script>
+
+
+
+</body>
+</html>
